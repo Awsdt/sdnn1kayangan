@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDN 1 KAYANGAN</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #0080ff;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .slider {
+            position: relative;
+            max-width: 100%;
+            margin: 20px auto;
+        }
+
+        .slides {
+            display: none;
+        }
+
+        .slides img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .slider-dots {
+            text-align: center;
+        }
+
+        .slider-dots span {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .active-dot {
+            background-color: #717171;
+        }
+
+        .welcome-section {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .welcome-section img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin-right: 20px;
+        }
+
+        .welcome-section .welcome-text {
+            max-width: 600px;
+        }
+
+        .welcome-section .welcome-text h2 {
+            margin-top: 0;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+        .logo {
+              width: 50px; /* Sesuaikan dengan ukuran logo */
+             height: auto;
+             margin-left: 20px; /* Sesuaikan jarak logo dari kiri */
+        }
+
+        .teacher-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .teacher-card img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+        }
+
+        .teacher-details {
+            flex-grow: 1;
+        }
+
+        .teacher-details h3 {
+            margin: 0 0 5px 0;
+        }
+
+        .teacher-details p {
+            margin: 5px 0;
+        }
+
+        footer {
+            background-color: #0080ff;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="guru/logo.png" alt="logo" class="logo">
+        <h1>SDN 1 KAYANGAN</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#teachers">Data Guru</a></li>
+                <li><a href="#contact">Kontak</a></li>
+                <li><a href="galeri.html">Galeri</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <div class="slider">
+        <div class="slides active">
+            <img src="guru/kelas6.jpg" alt="kelas6">
+        </div>
+        <div class="slides">
+            <img src="guru/guru.jpeg" alt="guru">
+        </div>
+        <div class="slides">
+            <img src="guru/siswa.jpeg" alt="siswa">
+        </div>
+        <div class="slider-dots">
+            <span class="active-dot" onclick="currentSlide(1)"></span>
+            <span onclick="currentSlide(2)"></span>
+            <span onclick="currentSlide(3)"></span>
+        </div>
+    </div>
+
+    <main>
+        <section class="welcome-section">
+            <img src="guru/kepalasekolah.jpeg" alt="Kepala Sekolah">
+            <div class="welcome-text">
+                <h2>Sambutan Kepala Sekolah</h2>
+                <p>Selamat datang di website resmi sekolah kami. Saya, [Mahrim], merasa bangga dapat mempersembahkan berbagai informasi tentang kegiatan dan prestasi sekolah melalui platform ini. Kami berkomitmen untuk memberikan pendidikan terbaik dan membentuk karakter siswa yang unggul dan berakhlak mulia. Terima kasih atas dukungan dan kepercayaan Anda kepada sekolah kami.</p>
+                <p>Hormat kami,</p>
+                <p>Mahrim, S.Pd.I</p>
+            </div>
+        </section>
+
+        <section id="home">
+            <h2>Selamat Datang di SD NEGERI 1 KAYANGAN</h2>
+            <p>Ini adalah website resmi sekolah kami.</p>
+        </section>
+        
+        <section id="about">
+            <h2>Tentang Sekolah</h2>
+            <p>Sekolah kami berdiri sejak tahun 1945 dan telah melahirkan banyak prestasi.</p>
+        </section>
+        
+        <section id="teachers">
+            <h2>Data Guru</h2>
+            <div class="teacher-card">
+                <img src="guru/ENI.jpeg" alt="Ahmad Yani">
+                <div class="teacher-details">
+                    <h3>ENI ANITA A.RAHMAN, S.Pd</h3>
+                    <p>Guru Kelas 2</p>
+                    <p>Sidutan 28 Oktober 1979</p>
+                    <p>Email: enirahman80@guru.sd.belajar.id</p>
+                    <p>Biografi: Eni anita telah mengajar di sekolah dasar selama 20 tahun dengan selalu berdedikasi kepada sekolah, selalu berusaha untuk membuat pembelajaran menjadi interaktif dan menarik bagi siswanya.</p>
+                </div>
+            </div>
+            <div class="teacher-card">
+                <img src="guru/mariani.jpeg" alt="Sri Rahayu">
+                <div class="teacher-details">
+                    <h3>MARIANI, S.Pd</h3>
+                    <p>GURU KELAS 3</p>
+                    <p>Email: Marianispd1220@guru.sd.belajar.id</p>
+                    <p>Biografi: Mariani lahir di pancor tanggal 31 Desember 1970, memulai karir didunia pendidikan sejak tahun 2011 hingga sekarang dengan penuh semangat kerja tinggi.</p>
+                </div>
+            </div>
+            <div class="teacher-card">
+                <img src="guru/wati.jpeg" alt="Budi Santoso">
+                <div class="teacher-details">
+                    <h3>SITI RAHMAWATI, S.Pd</h3>
+                    <p>GURU KELAS 4</p>
+                    <p>Email: sitirahmawatispd00@guru.sd.belajar.id</p>
+                    <p>Biografi: Siti Rahmawati memulai karir sejak tahun 2005 di SDN 1 KAYANGAN dengan keyakinan penuh impian akan datang ketika seseorang berusaha meraihnya .</p>
+                </div>
+            </div>
+        </div>
+        <div class="teacher-card">
+            <img src="guru/sopi.jpeg" alt="Budi Santoso">
+            <div class="teacher-details">
+                <h3>SOPANI, S.Pd</h3>
+                <p>GURU KELAS 5</p>
+                <p>Email: sopiani.80@guru.sd.belajar.id</p>
+                <p>Biografi:  JADIKAN SETIAP TEMPAT SEBAGAI SEKOLAH, DAN JADIKAN SETIAP ORANG ADALAH GURU.</p>
+            </div>
+        </div>
+        <div class="teacher-card">
+            <img src="guru/yus.jpeg" alt="Budi Santoso">
+            <div class="teacher-details">
+                <h3>YUSILAMAYANTI, S.Pd</h3>
+                <p>GURU KELAS 1</p>
+                <p>Email: yusilamayantispd78@guru.sd.belajar.id</p>
+                <p>Biografi: belajar dari pengalaman yang pahit dan rumit menjadi cambuk untuk meraih segala kemudahan dimasa datang.</p>
+            </div>
+        </div>
+        <div class="teacher-card">
+            <img src="guru/wiiwk.jpeg" alt="Budi Santoso">
+            <div class="teacher-details">
+                <h3>WIWIK HARINATI, S.Pd</h3>
+                <p>GURU KELAS 6</p>
+                <p>Email: wiwik.harinati40@guru.sd.belajar.id</p>
+                <p>Biografi: Gantungkanlah cita cita mu setinggi bintang walaupun kakimu menginjak bumi. Karena selama engkau mau pasti engkau mampu meraihnya.</p>
+            </div>
+        </div>
+        <div class="teacher-card">
+            <img src="guru/romi.jpeg" alt="Budi Santoso">
+            <div class="teacher-details">
+                <h3>ROMI RUSANDI, S.Pd</h3>
+                <p>GURU PJOK</p>
+                <p>Email: @guru.sd.belajar.id</p>
+                <p>Biografi:  JADIKAN SETIAP TEMPAT SEBAGAI SEKOLAH, DAN JADIKAN SETIAP ORANG ADALAH GURU.</p>
+            </div>
+        </div>
+        <div class="teacher-card">
+            <img src="guru/iwan.jpeg" alt="Budi Santoso">
+            <div class="teacher-details">
+                <h3>IWAN, S.Pd</h3>
+                <p>GURU KELAS 5</p>
+                <p>Email: sopiani.80@guru.sd.belajar.id</p>
+                <p>Biografi:  JADIKAN SETIAP TEMPAT SEBAGAI SEKOLAH, DAN JADIKAN SETIAP ORANG ADALAH GURU.</p>
+            </div>
+        </div>
+        
+            <!-- Tambahkan data guru lainnya di sini -->
+        </section>
+        
+        <section id="contact">
+            <h2>Kontak</h2>
+            <p>Alamat: Jl. RAYA TANJUNG-BAYAN</p>
+            <p>Telepon: 087864871852</p>
+            <p>Email: sdn1kayangan@yahoo.com</p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; kampus mengajar 7 . Tahun 2024.</p>
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.querySelectorAll(".slides");
+            let dots = document.querySelectorAll(".slider-dots span");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active-dot", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active-dot";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+
+        function currentSlide(n) {
+            slideIndex = n - 1;
+            showSlides();
+        }
+    </script>
+</body>
+</html>
